@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT Solutions - Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header inner-header">
+    <nav class="navbar">
+      <div class="nav-logo">
+        <img src="logo (1).webp" alt="IT Solutions Logo" class="logo-img">
+      </div>
+      <div class="nav-toggle" id="nav-toggle">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- 1) PAGE HERO -->
+    <section class=\"page-hero scroll-animate\">
+      <h1>Contact Us</h1>
+      <p>We’re here to answer your questions and discuss your IT needs.</p>
+    </section>
+  </header>
+
+  <main>
+    <!-- 2) CONTACT FORM -->
+    <section class="section contact-section">
+      <div class="section-header">
+        <h2>Send a Message</h2>
+      </div>
+      <form class="contact-form scroll-animate" id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name*</label>
+            <input type="text" id="name" pattern="[A-Za-z\s'\-]*" placeholder="Enter your full name" maxlength="100" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email*</label>
+            <input type="email" id="email" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject*</label>
+          <input type="text" id="subject" pattern="[A-Za-z\s'\-&,.:!?]*" placeholder="Enter subject" maxlength="150" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message*</label>
+          <textarea id="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <p class="form-status" id="form-status"></p>
+      </form>
+    </section>
+
+    <!-- 3) CONTACT INFO -->
+    <section class="section contact-info">
+      <div class="section-header">
+        <h2>Our Offices</h2>
+        <p>Reach out to us through any of these channels</p>
+      </div>
+      <div class="contact-channels">
+        <div class="contact-card hover-lift scroll-animate">
+          <h3>📧 Email</h3>
+          <p><a href="mailto:info@itsolutions.com">info@itsolutions.com</a></p>
+          <p class="contact-desc">General inquiries and business opportunities</p>
+        </div>
+        <div class="contact-card hover-lift scroll-animate">
+          <h3>📞 Phone</h3>
+          <p><a href="tel:+1000123456">+1 (000) 123 4567</a></p>
+          <p class="contact-desc">Office hours: Monday - Friday, 9 AM - 6 PM EST</p>
+        </div>
+        <div class="contact-card hover-lift scroll-animate">
+          <h3>🚨 Support</h3>
+          <p><a href="mailto:support@itsolutions.com">support@itsolutions.com</a></p>
+          <p class="contact-desc">24/7 availability for critical incidents</p>
+        </div>
+        <div class="contact-card hover-lift scroll-animate">
+          <h3>📍 Location</h3>
+          <p>123 Tech Avenue<br />Tech City, TC 12345</p>
+          <p class="contact-desc">Visit us for in-person meetings</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4) QUICK LINKS -->
+    <section class="section quick-contact">
+      <div class="section-header">
+        <h2>Need Something Specific?</h2>
+      </div>
+      <div class="quick-links-grid">
+        <a href="services.html#managed-it" class="quick-link-item hover-lift scroll-animate">
+          <h4>Managed IT Services</h4>
+          <p>Learn about our monitoring and support services</p>
+        </a>
+        <a href="services.html#cloud" class="quick-link-item hover-lift scroll-animate">
+          <h4>Cloud Solutions</h4>
+          <p>Explore cloud migration and optimization</p>
+        </a>
+        <a href="services.html#security" class="quick-link-item hover-lift scroll-animate">
+          <h4>Cybersecurity</h4>
+          <p>Discover our security services and compliance support</p>
+        </a>
+        <a href="about.html" class="quick-link-item hover-lift scroll-animate">
+          <h4>About Us</h4>
+          <p>Meet our team and learn our story</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- 5) FAQ -->
+    <section class="section faq">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item hover-lift scroll-animate">
+          <h3>What industries do you serve?</h3>
+          <p>We work with organizations across finance, healthcare, retail, manufacturing, education, and more. Our services are tailored to meet industry-specific compliance and security requirements.</p>
+        </div>
+        <div class="faq-item hover-lift scroll-animate">
+          <h3>Do you provide 24/7 support?</h3>
+          <p>Yes, our managed services include 24/7 monitoring and support options. We have dedicated support teams available around the clock for critical incidents.</p>
+        </div>
+        <div class="faq-item hover-lift scroll-animate">
+          <h3>Can you work with our internal IT team?</h3>
+          <p>Absolutely. We often co-manage environments with in-house teams, allowing for seamless integration and knowledge transfer to enhance your team's capabilities.</p>
+        </div>
+        <div class="faq-item hover-lift scroll-animate">
+          <h3>What makes IT Solutions different?</h3>
+          <p>We combine deep technical expertise with a business-first approach. We focus on delivering measurable ROI and maintaining transparent communication throughout all engagements.</p>
+        </div>
+        <div class="faq-item hover-lift scroll-animate">
+          <h3>How long does a typical engagement take?</h3>
+          <p>Timeline varies based on project scope. Initial assessments typically take 2-4 weeks, while migrations and implementations can range from weeks to months depending on complexity.</p>
+        </div>
+        <div class="faq-item hover-lift scroll-animate">
+          <h3>What should I bring to an initial consultation?</h3>
+          <p>Bring details about your current infrastructure, business goals, budget constraints, and any specific challenges you're facing. We'll help you define the best path forward.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>IT Solutions</h3>
+        <p>Secure, scalable, and reliable technology for modern businesses.</p>
+        <div class="social-links">
+          <a href="404.html" class="social-icon" title="Facebook" target="_blank">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="404.html" class="social-icon" title="Twitter" target="_blank">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.953 4.57a10 10 0 002.856-3.51 10 10 0 01-2.837.856 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417a9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+          </a>
+          <a href="404.html" class="social-icon" title="LinkedIn" target="_blank">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.249-.13.597-.13.945v5.442h-3.554s.05-8.814 0-9.714h3.554v1.375c.427-.659 1.191-1.598 2.898-1.598 2.117 0 3.704 1.381 3.704 4.352v5.585zM5.337 9.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 11.019H3.555V9.738h3.564v10.714zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+          </a>
+          <a href="404.html" class="social-icon" title="GitHub" target="_blank">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-services">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="404.html">Managed IT</a></li>
+          <li><a href="404.html">Cloud Solutions</a></li>
+          <li><a href="404.html">Cybersecurity</a></li>
+          <li><a href="404.html">Consulting</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:info@itsolutions.com">info@itsolutions.com</a></p>
+        <p>Phone: <a href="tel:+1000123456">+1 (000) 123 4567</a></p>
+        <p>Support: <a href="mailto:support@itsolutions.com">support@itsolutions.com</a></p>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <p class="footer-bottom">&copy; 2026 IT Solutions. All rights reserved. | <a href="404.html">Privacy Policy</a> | <a href="404.html">Terms of Service</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found | IT Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .error-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .error-code {
+      font-size: 15rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #4f46e5, #22d3ee, #10b981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0;
+      line-height: 1;
+      animation: pulse-scale 3s ease-in-out infinite;
+      text-shadow: 0 0 40px rgba(79, 70, 229, 0.3);
+    }
+
+    @keyframes pulse-scale {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+      }
+    }
+
+    .error-title {
+      font-size: 2.5rem;
+      color: #e5e7eb;
+      margin: 1rem 0;
+      animation: fadeInDown 0.8s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .error-message {
+      font-size: 1.1rem;
+      color: #94a3b8;
+      max-width: 500px;
+      margin: 1.5rem 0 2.5rem;
+      line-height: 1.8;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .error-buttons {
+      display: flex;
+      gap: 1.5rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeInUp 0.8s ease-out 0.4s both;
+    }
+
+    .btn-404 {
+      padding: 1rem 2.5rem;
+      border-radius: 10px;
+      border: 2px solid;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary-404 {
+      background: linear-gradient(135deg, #4f46e5, #6366f1);
+      border-color: #4f46e5;
+      color: white;
+    }
+
+    .btn-primary-404::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .btn-primary-404:hover::before {
+      left: 100%;
+    }
+
+    .btn-primary-404:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(79, 70, 229, 0.4);
+      border-color: #818cf8;
+    }
+
+    .btn-secondary-404 {
+      background: transparent;
+      border-color: #94a3b8;
+      color: #94a3b8;
+    }
+
+    .btn-secondary-404:hover {
+      background: rgba(148, 163, 184, 0.1);
+      border-color: #cbd5e1;
+      color: #cbd5e1;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(148, 163, 184, 0.2);
+    }
+
+    .error-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .error-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 50%, rgba(79, 70, 229, 0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 50%, rgba(34, 211, 238, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+      animation: shift 10s ease-in-out infinite;
+    }
+
+    @keyframes shift {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(10px, 10px);
+      }
+    }
+
+    .error-container > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .suggestions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+      max-width: 900px;
+      width: 100%;
+      animation: fadeInUp 0.8s ease-out 0.6s both;
+    }
+
+    .suggestion-card {
+      background: linear-gradient(145deg, #020617, #020617 40%, #020617 80%);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .suggestion-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at top, rgba(79, 70, 229, 0.35), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .suggestion-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.9);
+      border-color: rgba(129, 140, 248, 0.8);
+    }
+
+    .suggestion-card:hover::before {
+      opacity: 1;
+    }
+
+    .suggestion-card a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .suggestion-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .suggestion-title {
+      font-size: 1rem;
+      color: #e5e7eb;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .suggestion-desc {
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
+
+    .floating-element {
+      position: absolute;
+      opacity: 0.1;
+      font-size: 6rem;
+      animation: float 6s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    .float-1 {
+      top: 10%;
+      left: 5%;
+      animation-delay: 0s;
+    }
+
+    .float-2 {
+      top: 60%;
+      right: 5%;
+      animation-delay: 2s;
+    }
+
+    .float-3 {
+      bottom: 10%;
+      left: 15%;
+      animation-delay: 4s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(30px);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .error-code {
+        font-size: 8rem;
+      }
+
+      .error-title {
+        font-size: 1.8rem;
+      }
+
+      .error-message {
+        font-size: 1rem;
+        margin: 1rem 0 1.5rem;
+      }
+
+      .error-buttons {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .btn-404 {
+        width: 100%;
+      }
+
+      .suggestions {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="error-background"></div>
+  <div class="floating-element float-1">⚡</div>
+  <div class="floating-element float-2">🔧</div>
+  <div class="floating-element float-3">💻</div>
+
+  <div class="error-container">
+    <div class="error-icon">🚀</div>
+    <h1 class="error-code">404</h1>
+    <h2 class="error-title">Page Not Found</h2>
+    <p class="error-message">
+      Oops! It seems the page you're looking for has taken a flight to the digital unknown. 
+      Don't worry, we can help you find your way back!
+    </p>
+
+    <div class="error-buttons">
+      <a href="index.html" class="btn-404 btn-primary-404">
+        ← Back to Home
+      </a>
+      <a href="javascript:history.back()" class="btn-404 btn-secondary-404">
+        ↶ Go Back
+      </a>
+    </div>
+
+    <div class="suggestions">
+      <div class="suggestion-card">
+        <a href="index.html">
+          <span class="suggestion-icon">🏠</span>
+          <div class="suggestion-title">Home</div>
+          <div class="suggestion-desc">Return to our homepage</div>
+        </a>
+      </div>
+      <div class="suggestion-card">
+        <a href="about.html">
+          <span class="suggestion-icon">👥</span>
+          <div class="suggestion-title">About Us</div>
+          <div class="suggestion-desc">Learn about our team</div>
+        </a>
+      </div>
+      <div class="suggestion-card">
+        <a href="services.html">
+          <span class="suggestion-icon">⚙️</span>
+          <div class="suggestion-title">Services</div>
+          <div class="suggestion-desc">Explore our offerings</div>
+        </a>
+      </div>
+      <div class="suggestion-card">
+        <a href="contact.html">
+          <span class="suggestion-icon">📧</span>
+          <div class="suggestion-title">Contact</div>
+          <div class="suggestion-desc">Get in touch with us</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Smooth page load animation
+    window.addEventListener('load', () => {
+      document.body.style.opacity = '1';
+    });
+
+    // Interactive hover effects
+    document.querySelectorAll('.suggestion-card').forEach((card, index) => {
+      card.addEventListener('mouseenter', function() {
+        this.style.animation = 'none';
+        setTimeout(() => {
+          this.style.animation = 'pulse-scale 0.6s ease-out';
+        }, 10);
+      });
+    });
+
+    // Random greeting message
+    const messages = [
+      "Looks like you've taken a wrong turn...",
+      "Houston, we have a 404 problem!",
+      "This page went missing in cyberspace.",
+      "Seems like this page is in another castle.",
+      "The page you seek has vanished!",
+      "Error 404: Page not found, hope still alive."
+    ];
+
+    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+    document.querySelector('.error-message').innerText = randomMessage + 
+      " Don't worry, we can help you find your way back!";
+
+    // Add floating animation to error code
+    const errorCode = document.querySelector('.error-code');
+    errorCode.addEventListener('click', function() {
+      this.style.animation = 'none';
+      setTimeout(() => {
+        this.style.animation = 'pulse-scale 3s ease-in-out infinite';
+      }, 100);
+    });
+  </script>
+</body>
+</html>

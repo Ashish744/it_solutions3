@@ -1501,6 +1501,7 @@ textarea:focus {
   transition: all var(--transition-fast);
   display: inline-block;
   position: relative;
+  margin-top: -0.5rem;
 }
 
 .login-btn::after {

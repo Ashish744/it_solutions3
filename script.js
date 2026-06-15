@@ -15,6 +15,30 @@ if (navToggle && navLinks) {
   });
 }
 
+// Password visibility toggle functionality
+function initPasswordToggle(toggleBtnId, inputId) {
+  const toggleBtn = document.getElementById(toggleBtnId);
+  const input = document.getElementById(inputId);
+  
+  if (toggleBtn && input) {
+    toggleBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      toggleBtn.classList.toggle("active");
+      
+      if (input.type === "password") {
+        input.type = "text";
+      } else {
+        input.type = "password";
+      }
+    });
+  }
+}
+
+// Initialize password toggles
+initPasswordToggle("togglePassword", "password");
+initPasswordToggle("toggleSignupPassword", "signup-password");
+initPasswordToggle("toggleSignupConfirm", "signup-confirm");
+
 // Simple testimonials auto slider (home page)
 const testimonials = document.querySelectorAll(".testimonial");
 let testimonialIndex = 0;

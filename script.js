@@ -308,12 +308,27 @@ if (signupForm) {
     const confirm = document.getElementById("signup-confirm").value;
     const agreeTerms = document.getElementById("agreeTerms").checked;
     
+    // String validation regex (only letters and spaces)
+    const stringRegex = /^[a-zA-Z\s]+$/;
+    
     // Email validation regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     
     // Validate inputs
     if (!name || !email || !company || !password || !confirm) {
       alert("Please fill in all fields");
+      return;
+    }
+    
+    // Validate full name - only letters and spaces
+    if (!stringRegex.test(name)) {
+      alert("Full name should contain only letters and spaces");
+      return;
+    }
+    
+    // Validate company name - only letters and spaces
+    if (!stringRegex.test(company)) {
+      alert("Company name should contain only letters and spaces");
       return;
     }
     
